@@ -1,191 +1,62 @@
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * Delete the template below * * * * * * * * * -->
-<!-- * * * * * * * to get started with your project! * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-
-<style>
-  :host {
-    --bright-blue: oklch(51.01% 0.274 263.83);
-    --electric-violet: oklch(53.18% 0.28 296.97);
-    --french-violet: oklch(47.66% 0.246 305.88);
-    --vivid-pink: oklch(69.02% 0.277 332.77);
-    --hot-red: oklch(61.42% 0.238 15.34);
-    --orange-red: oklch(63.32% 0.24 31.68);
-
-    --gray-900: oklch(19.37% 0.006 300.98);
-    --gray-700: oklch(36.98% 0.014 302.71);
-    --gray-400: oklch(70.9% 0.015 304.04);
-
-    --red-to-pink-to-purple-vertical-gradient: linear-gradient(
-      180deg,
-      var(--orange-red) 0%,
-      var(--vivid-pink) 50%,
-      var(--electric-violet) 100%
-    );
-
-    --red-to-pink-to-purple-horizontal-gradient: linear-gradient(
-      90deg,
-      var(--orange-red) 0%,
-      var(--vivid-pink) 50%,
-      var(--electric-violet) 100%
-    );
-
-    --pill-accent: var(--bright-blue);
-
-    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-      Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-      "Segoe UI Symbol";
-    box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-
-  h1 {
-    font-size: 3.125rem;
-    color: var(--gray-900);
-    font-weight: 500;
-    line-height: 100%;
-    letter-spacing: -0.125rem;
-    margin: 0;
-    font-family: "Inter Tight", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-      Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-      "Segoe UI Symbol";
-  }
-
-  p {
-    margin: 0;
-    color: var(--gray-700);
-  }
-
-  main {
-    width: 100%;
-    min-height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
-    box-sizing: inherit;
-    position: relative;
-  }
-
-  .angular-logo {
-    max-width: 9.2rem;
-  }
-
-  .content {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    max-width: 700px;
-    margin-bottom: 3rem;
-  }
-
-  .content h1 {
-    margin-top: 1.75rem;
-  }
-
-  .content p {
-    margin-top: 1.5rem;
-  }
-
-  .divider {
-    width: 1px;
-    background: var(--red-to-pink-to-purple-vertical-gradient);
-    margin-inline: 0.5rem;
-  }
-
-  .pill-group {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    flex-wrap: wrap;
-    gap: 1.25rem;
-  }
-
-  .pill {
-    display: flex;
-    align-items: center;
-    --pill-accent: var(--bright-blue);
-    background: color-mix(in srgb, var(--pill-accent) 5%, transparent);
-    color: var(--pill-accent);
-    padding-inline: 0.75rem;
-    padding-block: 0.375rem;
-    border-radius: 2.75rem;
-    border: 0;
-    transition: background 0.3s ease;
-    font-family: var(--inter-font);
-    font-size: 0.875rem;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 1.4rem;
-    letter-spacing: -0.00875rem;
-    text-decoration: none;
-  }
-
-  .pill:hover {
-    background: color-mix(in srgb, var(--pill-accent) 15%, transparent);
-  }
-
-  .pill-group .pill:nth-child(6n + 1) {
-    --pill-accent: var(--bright-blue);
-  }
-  .pill-group .pill:nth-child(6n + 2) {
-    --pill-accent: var(--french-violet);
-  }
-  .pill-group .pill:nth-child(6n + 3),
-  .pill-group .pill:nth-child(6n + 4),
-  .pill-group .pill:nth-child(6n + 5) {
-    --pill-accent: var(--hot-red);
-  }
-
-  .pill-group svg {
-    margin-inline-start: 0.25rem;
-  }
-
-  .social-links {
-    display: flex;
-    align-items: center;
-    gap: 0.73rem;
-    margin-top: 1.5rem;
-  }
-
-  .social-links path {
-    transition: fill 0.3s ease;
-    fill: var(--gray-400);
-  }
-
-  .social-links a:hover svg path {
-    fill: var(--gray-900);
-  }
-
-  @media screen and (max-width: 650px) {
-    .content {
-      flex-direction: column;
-      width: max-content;
-    }
-
-    .divider {
-      height: 1px;
-      width: 100%;
-      background: var(--red-to-pink-to-purple-horizontal-gradient);
-      margin-block: 1.5rem;
-    }
-  }
-</style>
 
 
+<!-- <header data-directional-scroll-reveal="true" data-sticky-container="" class="site-header sticky--scrolling-up">
+  <div id="block-dart-wrapper-dart-wrapper-header" class="block block-dart-wrapper">
 
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content above * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * End of Placeholder  * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+  
+<div class="content">
+  <div class="container"><div class="row"><div id="nav-dartmouth" aria-hidden="true" role="navigation" tabindex="-1"><ul class="nav-dartmouth-table" role="list"><li class="three column" role="listitem" aria-labelledby="nav-label-154701"><h3 id="nav-label-154701"><a href="#">Admissions<span class="arrow"></span></a></h3><ul class="group" role="menu"><li role="menuitem"><a class="universal-header-outcomes" href="https://home.dartmouth.edu/outcomes">Outcomes</a></li><li role="menuitem"><a class="universal-header-the-student-experience" href="https://home.dartmouth.edu/admissions/student-experience">The Student Experience</a></li><li role="menuitem"><a class="universal-header-financial-aid" href="https://home.dartmouth.edu/financial-aid">Financial Aid</a></li><li role="menuitem"><a class="universal-header-degree-finder" href="https://home.dartmouth.edu/degrees">Degree Finder</a></li></ul></li><li class="three column" role="listitem" aria-labelledby="nav-label-154706"><h3 id="nav-label-154706"><a href="#">Academics<span class="arrow"></span></a></h3><ul class="group" role="menu"><li role="menuitem"><a class="universal-header-undergraduate-arts-sciences" href="https://home.dartmouth.edu/academics/undergraduate-arts-sciences">Undergraduate Arts &amp; Sciences</a></li><li role="menuitem"><a class="universal-header-departments-and-programs" href="https://home.dartmouth.edu/academics/departments-programs">Departments and Programs</a></li><li role="menuitem"><a class="universal-header-research-scholarship-creativity" href="https://home.dartmouth.edu/academics/research">Research, Scholarship &amp; Creativity</a></li><li role="menuitem"><a class="universal-header-centers-institutes" href="https://home.dartmouth.edu/academics/centers-institutes">Centers &amp; Institutes</a></li><li role="menuitem"><a class="universal-header-geisel-school-of-medicine" href="https://geiselmed.dartmouth.edu/">Geisel School of Medicine</a></li><li role="menuitem"><a class="universal-header-guarini-school-of-graduate-advanced-studies" href="https://graduate.dartmouth.edu/">Guarini School of Graduate &amp; Advanced Studies</a></li><li role="menuitem"><a class="universal-header-thayer-school-of-engineering" href="https://engineering.dartmouth.edu/">Thayer School of Engineering</a></li><li role="menuitem"><a class="universal-header-tuck-school-of-business" href="https://www.tuck.dartmouth.edu/">Tuck School of Business</a></li></ul></li><li class="three column" role="listitem" aria-labelledby="nav-label-154711"><h3 id="nav-label-154711"><a href="#">Campus Life<span class="arrow"></span></a></h3><ul class="group" role="menu"><li role="menuitem"><a class="universal-header-events" href="https://home.dartmouth.edu/events">Events</a></li><li role="menuitem"><a class="universal-header-diversity-inclusion" href="https://home.dartmouth.edu/campus-life/diversity-inclusion">Diversity &amp; Inclusion</a></li><li role="menuitem"><a class="universal-header-athletics-recreation" href="https://home.dartmouth.edu/campus-life/athletics-recreation">Athletics &amp; Recreation</a></li><li role="menuitem"><a class="universal-header-student-groups-activities" href="https://home.dartmouth.edu/campus-life/student-groups-activities">Student Groups &amp; Activities</a></li><li role="menuitem"><a class="universal-header-residential-life" href="https://home.dartmouth.edu/campus-life/residential-life">Residential Life</a></li></ul></li><li class="three column" role="listitem" aria-labelledby="nav-label-154716"><h3 id="nav-label-154716"><a href="#">More<span class="arrow"></span></a></h3><ul class="group" role="menu"><li role="menuitem"><a class="universal-header-about" href="https://home.dartmouth.edu/about">About</a></li><li role="menuitem"><a class="universal-header-news" href="https://home.dartmouth.edu/news">News</a></li><li role="menuitem"><a class="universal-header-giving" href="https://calltolead.dartmouth.edu/">Giving</a></li><li role="menuitem"><a class="universal-header-news-media" href="https://home.dartmouth.edu/news/news-media">News Media</a></li></ul><div id="search-dartmouth" role="search"><form onsubmit="location.href='//home.dartmouth.edu/search/google?keys=' + document.getElementById('input-search-dartmouth').value; return false;"><label for="input-search-dartmouth" class="offscreen">Search</label><input type="text" id="input-search-dartmouth" name="input-search-dartmouth" placeholder="Search" aria-required="true"><input type="submit" class="icn-search" value="GO"></form></div></li></ul></div></div></div><div role="banner" class="container" aria-label="College-wide Universal Header"><header class="row header-main"><div class="eight column"><a href="//home.dartmouth.edu" class="logo">Dartmouth College</a></div><div class="four column"><nav id="btn-nav-dartmouth" aria-label="Universal Header Navigation"><a class="universal-header-menu-toggle closed" aria-label="Explore Dartmouth" href="#"><span class="icn"></span><span class="btn-txt">Explore Dartmouth</span></a></nav></div></header></div>  </div>
+</div>
+  <div class="tnew-cart-strip" id="tnew-cart-strip" style="display: none;">
+    <span class="event-occurence__content__item">
+      <i class="fal fa-shopping-cart"></i>
+      <a href="https://hoptix.dartmouth.edu/cart/details">View Cart &amp; Checkout</a>
+    </span>
+  </div>
+  
+  <div class="header-main">
+    <div data-sticky-item="" class="sticky-header-item">
+      <div class="row">
+        <div class="header__logo">
+          <a href="/">
+            <img class="wordmark" width="140" height="90" src="assets/hop-wordmark.svg" alt="Dartmouth Hopkins Center Full Logo">
+            <img class="logomark" width="86" height="40" src="assets/hop-logomark.svg" alt="Dartmouth Hopkins Center Full Logo">
+          </a>
+        </div>
+<div class="all-nav-container">
+  <div class="main-menu-container">
+    <nav id="main-menu" class="navigation" role="navigation">
+<ul class="menu">
+<li class="expanded menu-mlid-3333 menu__top-level has-ul"><span class="dropmenu-toggle">Film</span><button type="button"><span>Open</span> the  menu</button><ul class="menu"><li class="first expanded menu-mlid-11081 has-ul"><a href="https://hop.dartmouth.edu/film/now" class="has-ul">Hop Film Now</a><button type="button"><span>Open</span> the Hop Film Now menu</button><ul class="menu"><li class="first leaf menu-mlid-15086"><a href="https://hop.dartmouth.edu/events?types[]=111&amp;types[]=361&amp;types[]=1646&amp;types[]=1651&amp;season=All&amp;series=All&amp;topic=All">All Hop Films</a></li>
+</ul></li>
+</ul></li>
+<li class="expanded menu-mlid-3334 menu__top-level has-ul"><span class="dropmenu-toggle">Students</span><button type="button"><span>Open</span> the  menu</button><ul class="menu"><li class="first expanded menu-mlid-3341 has-ul"><a href="https://hop.dartmouth.edu/students" class="has-ul">Student Overview</a><button type="button"><span>Open</span> the Student Overview menu</button><ul class="menu"><li class="first leaf menu-mlid-10361"><a href="https://hop.dartmouth.edu/students/hopkins-center-fellows-program">Hop Fellows</a></li>
+</ul></li>
+</ul></li>
+<li class="expanded menu-mlid-3335 menu__top-level has-ul"><span class="dropmenu-toggle">Projects &amp; Ideas</span><button type="button"><span>Open</span> the  menu</button><ul class="menu"><li class="first expanded menu-mlid-14691 has-ul"><a href="https://hop.dartmouth.edu/projects-ideas/hop-reimagined" class="has-ul">The Hop Reimagined</a><button type="button"><span>Open</span> the The Hop Reimagined menu</button><ul class="menu"><li class="first leaf menu-mlid-14711"><a href="https://hop.dartmouth.edu/projects-ideas/hop-reimagined">Explore the Project</a></li>
+</ul></li>
+<li class="expanded menu-mlid-14361 has-ul"><a href="https://hop.dartmouth.edu/arts-at-the-core" class="has-ul">Arts at the Core</a><button type="button"><span>Open</span> the Arts at the Core menu</button><ul class="menu"><li class="first leaf has-children menu-mlid-14501"><a href="https://hop.dartmouth.edu/arts-at-the-core/arts-integration-initiative">Arts Integration Initiative</a></li>
+</ul></li>
+<li class="expanded menu-mlid-15161 has-ul"><a href="https://hop.dartmouth.edu/projects-ideas/2023-24-artists-residence" class="has-ul">Artists-in-Residence</a><button type="button"><span>Open</span> the Artists-in-Residence menu</button><ul class="menu"><li class="first leaf menu-mlid-15136"><a href="https://hop.dartmouth.edu/projects-ideas/2023-24-artists-residence/johnny-gandelsman">Johnny Gandelsman</a></li>
+</ul></li>
+<li class="last expanded menu-mlid-14371 has-ul"><a href="https://hop.dartmouth.edu/projects-ideas/resources" class="has-ul">Resources</a><button type="button"><span>Open</span> the Resources menu</button><ul class="menu"><li class="first leaf menu-mlid-12946"><a href="https://hop.dartmouth.edu/projects-ideas/resources/upper-valley-arts-partners">Upper Valley Arts Partners</a></li>
+</ul></li>
+</ul></li>
+<li class="last expanded menu-mlid-3336 menu__top-level has-ul"><span class="dropmenu-toggle">Membership</span><button type="button"><span>Open</span> the  menu</button><ul class="menu"><li class="first leaf menu-mlid-10501"><a href="https://hop.dartmouth.edu/join">Become a Member</a></li>
+</ul></li>
+</ul></nav>
+</div>
+
+          <button class="global-menu-toggle visually-hidden--sticky"><span class="visually-hidden--desktop">dartmouth.edu</span></button>
+        </div>
+
+        <button class="hamburger-menu-wrapper">
+          <div class="hamburger-menu"><span class="visually-hidden toggle-text">Click to Open Menu</span></div>
+        </button>
+      </div>
+    </div>
+  </div>
+</header> -->
 
 <app-home></app-home>
 

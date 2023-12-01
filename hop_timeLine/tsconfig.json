@@ -21,8 +21,27 @@
     "lib": [
       "ES2022",
       "dom"
+    ],
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "types": [
+      "jquery",
+      "node"
+      // ... other types ...
     ]
   },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.js",
+    "*.d.ts"
+, "jsdom.ts"  ],
+  "scripts": [
+    "/node_modules/jquery/dist/jquery.min.js",
+    "/node_modules/slick-carousel/slick/slick.min.js",
+    "/src/assets/mainJSFile.js"
+    ],
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
