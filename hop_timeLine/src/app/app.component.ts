@@ -1,19 +1,22 @@
-import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
-import { HomeComponent } from './home/home.component';
+import { Component, OnInit } from '@angular/core';  
+declare var $: any;  
+var name:string;
+var title;
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [
-    CommonModule, 
-    RouterOutlet,
-    HomeComponent,
-    ],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
-  title = 'hop_timeLine';
-}
+export class AppComponent  implements OnInit {  
+  name = 'Jquery Integration With Angular!';  
+  isJqueryWorking: any;  
+  title = 'hop_timeline_Project';
+
+  ngOnInit()  
+  {  
+    $(document).ready(() => {  
+        this.isJqueryWorking = 'Jquery is working !!!';  
+    });  
+  }  
+}   

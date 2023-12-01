@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "hop_timeLine": {
+    "hop_timeline_Project": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -15,11 +15,11 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:application",
+          "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/hop-time-line",
+            "outputPath": "dist/hop-timeline-project",
             "index": "src/index.html",
-            "browser": "src/main.ts",
+            "main": "src/main.ts",
             "polyfills": [
               "zone.js"
             ],
@@ -33,13 +33,9 @@
               "src/styles.scss"
             ],
             "scripts": [
-              "/src/assets/mainJSFile.js"
-            ],
-            "server": "src/main.server.ts",
-            "prerender": true,
-            "ssr": {
-              "entry": "server.ts"
-            }
+              "./node_modules/bootstrap/dist/js/bootstrap.min.js"
+
+            ]
           },
           "configurations": {
             "production": {
@@ -58,9 +54,12 @@
               "outputHashing": "all"
             },
             "development": {
+              "buildOptimizer": false,
               "optimization": false,
+              "vendorChunk": true,
               "extractLicenses": false,
-              "sourceMap": true
+              "sourceMap": true,
+              "namedChunks": true
             }
           },
           "defaultConfiguration": "production"
@@ -69,10 +68,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "hop_timeLine:build:production"
+              "browserTarget": "hop_timeline_Project:build:production"
             },
             "development": {
-              "buildTarget": "hop_timeLine:build:development"
+              "browserTarget": "hop_timeline_Project:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -80,7 +79,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "hop_timeLine:build"
+            "browserTarget": "hop_timeline_Project:build"
           }
         },
         "test": {
@@ -99,9 +98,7 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": [
-             
-            ]
+            "scripts": []
           }
         }
       }

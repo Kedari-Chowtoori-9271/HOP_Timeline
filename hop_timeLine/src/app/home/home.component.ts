@@ -1,13 +1,23 @@
-import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';  
+declare var $: any;
 
 @Component({
   selector: 'app-home',
-  standalone: true,
-  imports: [CommonModule],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.scss'
+  styleUrls: ['./home.component.scss']
 })
-export class HomeComponent {
-
+export class HomeComponent implements OnInit {
+  ngOnInit(): void {
+    $('.slickSlider').slick({
+      dots: true,
+      infinite: true,
+      speed: 700,
+      autoplay:true,
+      autoplaySpeed: 2000,
+      arrows:false,
+      slidesToShow: 1,
+      slidesToScroll: 1
+    });
+  }
+  
 }
