@@ -15,8 +15,6 @@ export class AppComponent  implements OnInit {
 
   ngOnInit()  
   {  
-    $(document).ready(() => {  
-        this.isJqueryWorking = 'Jquery is working !!!';  
-    });  
+   
   }  
 }   
