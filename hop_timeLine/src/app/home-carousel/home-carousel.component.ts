@@ -13,12 +13,13 @@ export class HomeCarouselComponent implements OnInit, AfterViewInit {
   ngAfterViewInit() {
   }
   ngOnInit(): void {
+    console.log('AB');
     $('.slider').slick({
       dots: true,
       infinite: true,
       speed: 300,
-      slidesToShow: 4,
-      slidesToScroll: 4,
+      slidesToShow: 1,
+      slidesToScroll: 1,
       autoplay: true,
   autoplaySpeed: 2000,
       responsive: [
@@ -50,12 +51,12 @@ export class HomeCarouselComponent implements OnInit, AfterViewInit {
   }
 
   slides = [
-    {img: "http://placehold.it/350x150/000000"},
-    {img: "http://placehold.it/350x150/111111"},
-    {img: "http://placehold.it/350x150/333333"},
-    {img: "http://placehold.it/350x150/666666"}
+    {img: "./assets/1.jpg"},
+    {img: "./assets/2.jpeg"},
+    {img: "./assets/3.jpg"},
+    {img: "./assets/1.jpg"}
   ];
-  slideConfig = {"slidesToShow": 3, "slidesToScroll": 1, "infinite": true,
+  slideConfig = {"slidesToShow": 1, "slidesToScroll": 1, "infinite": true,
   "dots": true,
   "autoplay": true,
   "autoplaySpeed": 2000  };

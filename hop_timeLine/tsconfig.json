@@ -23,7 +23,7 @@
       "ES2022",
       "dom"
     ],
-    "types": ["jQuery"]
+    "types": ["jQuery","page-flip"]
   },
   
   "angularCompilerOptions": {
@@ -31,8 +31,5 @@
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
     "strictTemplates": true,
-    "_enabledBlockTypes": [
-      "if", "switch", "for", "defer"
-    ]
   }
 }
