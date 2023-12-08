@@ -14,6 +14,7 @@ import {VgControlsModule} from '@videogular/ngx-videogular/controls';
 import {VgOverlayPlayModule} from '@videogular/ngx-videogular/overlay-play';
 import {VgBufferingModule} from '@videogular/ngx-videogular/buffering';
 import { BooksComponent } from './books/books.component';
+import { FooterComponent } from './footer/footer.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +22,8 @@ import { BooksComponent } from './books/books.component';
     HomeCarouselComponent,
     ContactComponent,
     HistoryComponent,
-    BooksComponent
+    BooksComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

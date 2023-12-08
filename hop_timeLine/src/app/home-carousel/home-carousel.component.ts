@@ -20,8 +20,10 @@ export class HomeCarouselComponent implements OnInit, AfterViewInit {
       speed: 300,
       slidesToShow: 1,
       slidesToScroll: 1,
-      autoplay: true,
-  autoplaySpeed: 2000,
+      autoplay: false,
+      arrows: true,
+      prevArrow: '<span class="prev_arrow"><img src="./assets/arrow-bar-left.svg" alt="left arrow icon"></span>',
+      nextArrow: '<span class="next_arrow"><img src="./assets/arrow-bar-right.svg" alt="right arrow icon"></span>',
       responsive: [
         {
           breakpoint: 1024,
