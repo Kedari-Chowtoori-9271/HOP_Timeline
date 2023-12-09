@@ -153,6 +153,7 @@
     justify-content: center;
     max-width: none;
     align-items: center;
+    display: grid;
 }
 
 .site-footer__lower img,.site-footer__lower ul {
@@ -190,6 +191,8 @@
 
 .site-footer__lower a {
     color: #fff;
+    display: flex;
+    justify-content: center;
 }
 
 .site-footer__banner {

@@ -15,6 +15,9 @@ import {VgOverlayPlayModule} from '@videogular/ngx-videogular/overlay-play';
 import {VgBufferingModule} from '@videogular/ngx-videogular/buffering';
 import { BooksComponent } from './books/books.component';
 import { FooterComponent } from './footer/footer.component';
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";   
+import { TimelineModule } from "primeng/timeline"; 
+import { CardModule } from "primeng/card"; 
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +37,10 @@ import { FooterComponent } from './footer/footer.component';
     VgCoreModule,
     VgControlsModule,
     VgOverlayPlayModule,
-    VgBufferingModule
+    VgBufferingModule,
+    BrowserAnimationsModule,
+    TimelineModule,
+    CardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

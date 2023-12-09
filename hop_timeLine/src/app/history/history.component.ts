@@ -9,8 +9,24 @@ var api:any;
 })
 export class HistoryComponent  implements OnInit{
   pageFlip!: PageFlip;
+  arr: any; 
 
   ngOnInit(): void {
+
+	this.arr = [ 
+	{ 
+		status: "Time1", 
+	}, 
+	{ 
+		status: "Time2", 
+	}, 
+	{ 
+		status: "Time3", 
+	}, 
+	{ 
+		status: "Time4", 
+	}, 
+	]; 
     var temp=document.getElementById("demoBookExample")
     const pageFlip = new PageFlip(
       document.getElementById("demoBookExample")!,

@@ -1,16 +1,4 @@
-<div class="container">
-    <div>
-        <button type="button" class="btn-prev">Previous page</button>
-        [<span class="page-current">1</span> of <span class="page-total">-</span>]
-        <button type="button" class="btn-next">Next page</button>
-    </div>
-
-    <div>
-        State: <i class="page-state">read</i>, orientation: <i class="page-orientation">landscape</i>
-    </div>
-</div>
-
-<div class="container" style="max-width: 100%;justify-content: center;align-items:center;display: flex;">
+<div class="container" style="max-width: 100%;justify-content: center;align-items:center;display: flex;margin-top:1em">
     <div class="flip-book" id="demoBookExample">
         <div class="page page-cover page-cover-top" data-density="hard">
             <div class="page-content">
@@ -78,7 +66,13 @@
         </div>
     </div>
 </div>
-
-<div style="margin-top:5em">
-
+<div class="container">
+    <div>
+        <button type="button" class="btn-prev">Previous page</button>
+        [<span class="page-current">1</span> of <span class="page-total">-</span>]
+        <button type="button" class="btn-next">Next page</button>
+    </div>
+    <div style="display: none;">
+        State: <i class="page-state">read</i>, orientation: <i class="page-orientation">landscape</i>
+    </div>
 </div>
